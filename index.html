@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Studio 隐私政策</title>
+<style>
+  :root{--ink:#111827;--ink2:#374151;--muted:#6b7280;--line:#e5e7eb;--teal:#0f766e;--bg:#f5f6f8}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.8;font-size:15px}
+  .wrap{max-width:780px;margin:0 auto;padding:48px 24px 80px}
+  header{display:flex;align-items:center;gap:12px;margin-bottom:36px}
+  .logo{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(135deg,#0f766e,#14b8a6);color:#fff;
+    font-family:ui-monospace,Consolas,monospace;font-weight:800;font-size:15px}
+  .brand{font-size:17px;font-weight:800;letter-spacing:-.01em}
+  .brand span{display:block;font-size:12px;color:var(--muted);font-weight:400;letter-spacing:0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;
+    box-shadow:0 1px 2px rgba(17,24,39,.04),0 12px 32px rgba(17,24,39,.05);padding:44px 44px 40px}
+  h1{font-size:30px;letter-spacing:-.02em;margin:0 0 6px}
+  .updated{color:var(--muted);font-size:13px;margin:0 0 30px}
+  h2{font-size:17px;margin:34px 0 10px;letter-spacing:-.01em}
+  p{margin:0 0 12px;color:var(--ink2)}
+  ul{margin:0 0 12px;padding-left:20px;color:var(--ink2)}
+  li{margin:6px 0}
+  table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:14px}
+  th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    padding:10px 12px;border-bottom:1px solid var(--line);background:#fafbfc}
+  td{padding:12px;border-bottom:1px solid #eef0f3;vertical-align:top;color:var(--ink2)}
+  tr:last-child td{border-bottom:none}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:13px;background:#f1f5f9;
+    padding:2px 6px;border-radius:5px;color:#0f172a}
+  .note{border-left:3px solid var(--teal);background:#f0fdfa;color:#134e4a;
+    padding:14px 16px;border-radius:0 10px 10px 0;margin:18px 0;font-size:14px}
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12.5px}
+  footer a{color:var(--teal);text-decoration:none}
+  @media(max-width:600px){.card{padding:28px 22px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">{ }</div>
+    <div class="brand">JSON Studio<span>本地 JSON 查看器</span></div>
+  </header>
+
+  <main class="card">
+    <h1>隐私政策</h1>
+    <p class="updated">最后更新：2026 年 11 月 3 日</p>
+
+    <div class="note">
+      <strong>一句话总结：</strong>JSON Studio 不收集任何数据。所有 JSON 都只在你的浏览器里处理，不会发送到任何服务器。
+    </div>
+
+    <h2>一、我们收集哪些信息</h2>
+    <p>没有。本扩展没有账号体系，没有统计埋点，没有广告，没有远程配置，也不包含任何第三方 SDK。</p>
+
+    <h2>二、数据如何处理</h2>
+    <ul>
+      <li>网页中的 JSON 仅在<strong>你的浏览器内</strong>解析、展示、搜索和对比，不会发送到任何服务器。</li>
+      <li>本扩展的代码中不存在网络请求：没有 <code>fetch</code>、没有 <code>XMLHttpRequest</code>、没有 WebSocket。</li>
+      <li>不读取或修改 Cookie，不访问浏览历史，不读取书签，不读取其他标签页。</li>
+      <li>「复制」操作只写入你本机的剪贴板。</li>
+      <li>展开状态、主题、搜索词都不做持久化，关闭页面即消失。</li>
+    </ul>
+
+    <h2>三、权限说明</h2>
+    <table>
+      <thead><tr><th>权限</th><th>用途</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>activeTab</code></td>
+          <td>你点击扩展图标时，读取当前标签页的文本，用于判断它是否为 JSON 并展示查看器。不点击不会读取任何页面。</td>
+        </tr>
+        <tr>
+          <td><code>scripting</code></td>
+          <td>将扩展包内自带的 <code>formatter.js</code> 注入当前标签页，渲染查看器。脚本随扩展打包，不加载远程代码。</td>
+        </tr>
+        <tr>
+          <td>可选的网站访问权限<br><code>http://*/*</code>、<code>https://*/*</code></td>
+          <td>仅在你主动开启「始终自动格式化」并同意授权后，才在网页上自动运行；可随时在扩展弹窗中撤销。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>四、数据共享</h2>
+    <p>不共享、不出售、不转让任何数据——因为本扩展根本不收集数据。也不存在「为广告目的使用数据」或「用于信用评估」的情况。</p>
+
+    <h2>五、第三方服务</h2>
+    <p>无。本扩展不接入任何第三方统计、广告、崩溃上报或云服务。</p>
+
+    <h2>六、数据保留</h2>
+    <p>没有服务器端数据需要保留。扩展在本地也不持久化保存你查看过的 JSON 内容，页面关闭后即释放。</p>
+
+    <h2>七、儿童隐私</h2>
+    <p>本扩展不收集任何人的数据，包括儿童。</p>
+
+    <h2>八、政策变更</h2>
+    <p>如果未来版本引入需要处理数据的功能，我们会在扩展更新说明中明确告知，并同步修改本页面。</p>
+
+    <h2>九、联系方式</h2>
+    <p>如有疑问，可通过 Chrome Web Store 商品页上的支持链接联系我们，或在项目仓库提交 issue。</p>
+  </main>
+
+  <footer>
+    JSON Studio · <a href="https://chrome.google.com/webstore" rel="noopener">Chrome Web Store</a>
+  </footer>
+</div>
+</body>
+</html>
